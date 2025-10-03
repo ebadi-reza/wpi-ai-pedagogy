@@ -1,3 +1,4 @@
+// Simple router for loading page templates
 
 // Page configuration
 const pages = {
@@ -16,6 +17,10 @@ const pages = {
     'news': {
         title: 'News - AI Pedagogy - WPI',
         template: 'templates/news.html'
+    },
+    'help-form': {
+        title: 'Faculty Support - AI Pedagogy - WPI',
+        template: 'templates/help-form.html'
     }
 };
 
@@ -50,6 +55,9 @@ async function loadPage(pageName) {
     document.getElementById('content-placeholder').innerHTML = content;
     document.getElementById('footer-placeholder').innerHTML = footer;
     
+    // Scroll to top of page
+    window.scrollTo(0, 0);
+    
     // After loading, highlight current page in nav
     highlightCurrentPage(pageName);
     
@@ -61,6 +69,11 @@ async function loadPage(pageName) {
     
     // Set up navigation links
     setupNavigation();
+    
+    // Set up form handler if on help-form page
+    if (pageName === 'help-form') {
+        setupFormHandler();
+    }
 }
 
 // Set up navigation to work with hash routing
@@ -158,6 +171,56 @@ function addBackToTopButton() {
     };
     
     window.addEventListener('scroll', scrollHandler);
+}
+
+// Handle form submission
+function setupFormHandler() {
+    const form = document.getElementById('faculty-help-form');
+    if (!form) return;
+    
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        
+        const messageDiv = document.getElementById('form-message');
+        
+        // Show loading state
+        messageDiv.className = 'form-message';
+        messageDiv.textContent = 'Submitting your request...';
+        messageDiv.style.display = 'block';
+        
+        // Simulate form submission (replace with actual endpoint later)
+        try {
+            // For now, just log the data and show success
+            console.log('Form submitted:', data);
+            
+            // Simulate API delay
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            // Show success message
+            messageDiv.className = 'form-message success';
+            messageDiv.innerHTML = `
+                <strong>Success!</strong> Your request has been submitted. 
+                We'll contact you at <strong>${data.email}</strong> within 2-3 business days.
+            `;
+            
+            // Clear form
+            form.reset();
+            
+            // Scroll to message
+            messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+        } catch (error) {
+            // Show error message
+            messageDiv.className = 'form-message error';
+            messageDiv.innerHTML = `
+                <strong>Error!</strong> There was a problem submitting your request. 
+                Please try again or email us directly at <a href="mailto:aipedagogy@wpi.edu">aipedagogy@wpi.edu</a>.
+            `;
+        }
+    });
 }
 
 // Handle hash changes for routing
