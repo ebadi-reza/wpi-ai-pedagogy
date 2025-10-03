@@ -1,0 +1,8 @@
+# Web server for local development
+# No dependencies needed for static site, but adding a simple HTTP server option
+
+# Optional: If you want to use Python's built-in server, no packages needed
+# Just run: python3 -m http.server 8000
+
+# Optional: For a more feature-rich local server
+# flask==3.0.0
