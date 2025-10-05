@@ -39,40 +39,45 @@ async function loadTemplate(url) {
 // Load and display a page
 async function loadPage(pageName) {
     const page = pages[pageName] || pages['home'];
-    
+
     // Update page title
     document.getElementById('page-title').textContent = page.title;
-    
+
     // Load header, content, and footer
     const [header, content, footer] = await Promise.all([
         loadTemplate('templates/header.html'),
         loadTemplate(page.template),
         loadTemplate('templates/footer.html')
     ]);
-    
+
     // Insert into page
     document.getElementById('header-placeholder').innerHTML = header;
     document.getElementById('content-placeholder').innerHTML = content;
     document.getElementById('footer-placeholder').innerHTML = footer;
-    
+
     // Scroll to top of page
     window.scrollTo(0, 0);
-    
+
     // After loading, highlight current page in nav
     highlightCurrentPage(pageName);
-    
+
     // Add smooth scrolling
     addSmoothScrolling();
-    
+
     // Add back to top button
     addBackToTopButton();
-    
+
     // Set up navigation links
     setupNavigation();
-    
+
     // Set up form handler if on help-form page
     if (pageName === 'help-form') {
         setupFormHandler();
+    }
+
+    // Load featured news on home page (after content is loaded)
+    if (pageName === 'home') {
+        setTimeout(() => loadFeaturedNews(), 100);
     }
 }
 
@@ -106,7 +111,7 @@ function addSmoothScrolling() {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
             if (href === '#' || href === '') return;
-            
+
             e.preventDefault();
             const target = document.querySelector(href);
             if (target) {
@@ -124,9 +129,9 @@ function addBackToTopButton() {
     // Remove existing button if any
     const existingButton = document.querySelector('.back-to-top');
     if (existingButton) existingButton.remove();
-    
+
     let backToTopButton;
-    
+
     const scrollHandler = function() {
         if (window.pageYOffset > 300) {
             if (!backToTopButton) {
@@ -169,7 +174,7 @@ function addBackToTopButton() {
             backToTopButton = null;
         }
     };
-    
+
     window.addEventListener('scroll', scrollHandler);
 }
 
@@ -177,46 +182,46 @@ function addBackToTopButton() {
 function setupFormHandler() {
     const form = document.getElementById('faculty-help-form');
     if (!form) return;
-    
+
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        
+
         const formData = new FormData(form);
         const data = Object.fromEntries(formData);
-        
+
         const messageDiv = document.getElementById('form-message');
-        
+
         // Show loading state
         messageDiv.className = 'form-message';
         messageDiv.textContent = 'Submitting your request...';
         messageDiv.style.display = 'block';
-        
+
         // Simulate form submission (replace with actual endpoint later)
         try {
             // For now, just log the data and show success
             console.log('Form submitted:', data);
-            
+
             // Simulate API delay
             await new Promise(resolve => setTimeout(resolve, 1000));
-            
+
             // Show success message
             messageDiv.className = 'form-message success';
             messageDiv.innerHTML = `
-                <strong>Success!</strong> Your request has been submitted. 
+                <strong>Success!</strong> Your request has been submitted.
                 We'll contact you at <strong>${data.email}</strong> within 2-3 business days.
             `;
-            
+
             // Clear form
             form.reset();
-            
+
             // Scroll to message
             messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            
+
         } catch (error) {
             // Show error message
             messageDiv.className = 'form-message error';
             messageDiv.innerHTML = `
-                <strong>Error!</strong> There was a problem submitting your request. 
+                <strong>Error!</strong> There was a problem submitting your request.
                 Please try again or email us directly at <a href="mailto:aipedagogy@wpi.edu">aipedagogy@wpi.edu</a>.
             `;
         }
@@ -234,3 +239,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const initialPage = window.location.hash.slice(1) || 'home';
     loadPage(initialPage);
 });
+
+// Load featured news for home page
+async function loadFeaturedNews() {
+    try {
+        console.log('Loading featured news...');
+        const newsHtml = await loadTemplate('templates/news.html');
+        console.log('News template loaded');
+
+        // Parse the HTML to extract featured article
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(newsHtml, 'text/html');
+        const featuredArticle = doc.querySelector('article[data-featured="true"]');
+
+        console.log('Featured article found:', featuredArticle);
+
+        if (featuredArticle) {
+            const featuredContainer = document.getElementById('featured-news-container');
+            console.log('Featured container:', featuredContainer);
+
+            if (featuredContainer) {
+                featuredContainer.innerHTML = featuredArticle.outerHTML;
+                console.log('Featured news inserted successfully!');
+            } else {
+                console.error('Featured news container not found!');
+            }
+        } else {
+            console.warn('No featured article found. Make sure one article has data-featured="true"');
+        }
+    } catch (error) {
+        console.error('Error loading featured news:', error);
+    }
+}
