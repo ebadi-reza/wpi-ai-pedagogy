@@ -37,4 +37,6 @@ logs/
 # Build files
 dist/
 build/
-*.egg-info/
+*.egg-info/filename.ext
+
+secrets.txt
