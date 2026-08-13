@@ -1234,10 +1234,6 @@ h3 {
 }
 
 .practice-card {
-    display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-    gap: 2rem;
-    align-items: start;
     background: white;
     border: 2px solid var(--wpi-gray-light);
     border-left: 4px solid var(--wpi-crimson);
@@ -1246,13 +1242,19 @@ h3 {
     transition: all 0.3s;
 }
 
-.practice-video {
-    min-width: 0;
-}
-
 .practice-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(172, 43, 55, 0.15);
+}
+
+.practice-video {
+    max-width: 820px;
+    margin: 0 auto 1.5rem;
+}
+
+.practice-details {
+    max-width: 820px;
+    margin: 0 auto;
 }
 
 /* Responsive 16:9 video container */
@@ -1373,11 +1375,6 @@ h3 {
 }
 
 @media (max-width: 900px) {
-    .practice-card {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
     .practice-duration {
         margin-left: 0;
     }
