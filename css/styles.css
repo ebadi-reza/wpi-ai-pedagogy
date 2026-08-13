@@ -1332,6 +1332,12 @@ h3 {
     line-height: 1.35;
 }
 
+/* Justify the description paragraph (unclassed <p> in .practice-details) */
+.practice-details > p:not(.practice-byline):not(.practice-meta):not(.practice-takeaway) {
+    text-align: justify;
+    hyphens: auto;
+}
+
 .practice-byline {
     color: var(--wpi-gray-dark);
     font-size: 0.95rem;
