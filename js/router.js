@@ -22,6 +22,10 @@ const pages = {
         title: 'News - AI Pedagogy - WPI',
         template: 'templates/news.html'
     },
+    'practice': {
+        title: 'AI in Practice - AI Pedagogy - WPI',
+        template: 'templates/practice.html'
+    },
     'help-form': {
         title: 'Faculty Support - AI Pedagogy - WPI',
         template: 'templates/help-form.html'

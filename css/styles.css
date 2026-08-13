@@ -75,8 +75,10 @@ body {
 /* Navigation */
 .nav-links {
     display: flex;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .nav-links a {
@@ -1219,5 +1221,164 @@ h3 {
     
     .case-study-grid {
         grid-template-columns: 1fr;
+    }
+}
+/* ============================================================
+   AI in Practice - Faculty Media Repository
+   ============================================================ */
+
+.practice-grid {
+    display: grid;
+    gap: 2.5rem;
+    margin: 2.5rem 0;
+}
+
+.practice-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: start;
+    background: white;
+    border: 2px solid var(--wpi-gray-light);
+    border-left: 4px solid var(--wpi-crimson);
+    border-radius: 8px;
+    padding: 1.75rem;
+    transition: all 0.3s;
+}
+
+.practice-video {
+    min-width: 0;
+}
+
+.practice-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(172, 43, 55, 0.15);
+}
+
+/* Responsive 16:9 video container */
+.video-embed {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background: #2E2E2E;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Thumbnail fallback for non-embeddable video */
+.video-thumb {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 56.25%;
+    background: #2E2E2E;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.video-thumb img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.video-thumb:hover img {
+    transform: scale(1.04);
+}
+
+.video-thumb-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: rgba(172, 43, 55, 0.92);
+    color: white;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s;
+}
+
+.video-thumb:hover .video-thumb-play {
+    background: #AC2B37;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.practice-details h2 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.4rem;
+    line-height: 1.35;
+}
+
+.practice-byline {
+    color: var(--wpi-gray-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.practice-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.practice-tag {
+    display: inline-block;
+    background: var(--wpi-gray-light);
+    color: var(--wpi-gray-dark);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+}
+
+.practice-duration {
+    font-size: 0.85rem;
+    color: var(--wpi-gray);
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.practice-takeaway {
+    background: var(--wpi-gray-light);
+    border-left: 3px solid var(--wpi-crimson);
+    padding: 0.85rem 1rem;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+    .practice-card {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .practice-duration {
+        margin-left: 0;
     }
 }

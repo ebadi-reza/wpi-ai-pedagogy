@@ -1,0 +1,147 @@
+<main class="main-content">
+    <div class="content-container">
+        <h1>AI in Practice</h1>
+
+        <p class="intro-text">
+            Short videos from WPI faculty showing how they actually use AI in their teaching,
+            research, and day-to-day academic work. Not theory &mdash; screen recordings, walkthroughs,
+            and honest reflections from colleagues across disciplines. Watch, borrow what fits your
+            context, and adapt the rest.
+        </p>
+
+        <!-- Contribute Call-to-Action Banner -->
+        <div class="cta-banner cta-banner-compact">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h3>Using AI in your own work?</h3>
+                    <p>Record a short walkthrough and we'll help you publish it here. No production experience needed.</p>
+                </div>
+            </div>
+            <a href="#help-form" data-page="help-form" class="btn btn-primary">Contribute a Video</a>
+        </div>
+
+        <div class="practice-grid">
+
+            <!-- ============================================================
+                 ENTRY 1 - Reza Ebadi
+                 TODO before publishing:
+                   1. Replace ECHO360_MEDIA_ID in the iframe src below
+                   2. Replace the title, summary, and takeaway text
+                   3. Adjust the tags to match the actual content
+                 ============================================================ -->
+            <article class="practice-card" data-tags="workflow, getting-started">
+                <div class="practice-video">
+                    <!--
+                        ECHO360 EMBED
+                        In EchoVideo: open the media > Share > Embed, and make sure the link
+                        type is set to PUBLIC (an authenticated link will show a login wall to
+                        anyone outside WPI). Paste the resulting src below.
+
+                        If WPI has public links disabled at the admin level, delete this iframe
+                        and use the THUMBNAIL FALLBACK block instead (see the commented example
+                        at the bottom of this file).
+                    -->
+                    <div class="video-embed">
+                        <iframe
+                            src="https://echo360.org/media/ECHO360_MEDIA_ID/public?autoplay=false&automute=false"
+                            title="How I Use AI in My Teaching Workflow"
+                            frameborder="0"
+                            allowfullscreen
+                            allow="autoplay; fullscreen; picture-in-picture">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="practice-details">
+                    <h2>How I Use AI in My Teaching Workflow</h2>
+
+                    <p class="practice-byline">
+                        <strong>Reza Ebadi, PhD</strong><br>
+                        Assistant Professor of Teaching, Mechanical &amp; Materials Engineering<br>
+                        AI Pedagogy Specialist, Morgan Center
+                    </p>
+
+                    <p class="practice-meta">
+                        <span class="practice-tag">Workflow</span>
+                        <span class="practice-tag">Getting Started</span>
+                        <span class="practice-duration">TODO: 8 min</span>
+                    </p>
+
+                    <p>
+                        TODO: Two or three sentences describing what the viewer will see. Be concrete
+                        about the actual task &mdash; what problem you were solving, which tool you
+                        reached for, and what you did with the output.
+                    </p>
+
+                    <p class="practice-takeaway">
+                        <strong>What you can try:</strong> TODO: One specific, transferable action a
+                        colleague could apply in their own course this week.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="cta-section">
+            <h2>Want to Share Your Approach?</h2>
+            <p>
+                You don't need a polished production &mdash; a five-minute screen recording of how you
+                actually work is more useful to your colleagues than a scripted demo. We'll handle
+                recording, captions, and hosting.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+                <a href="#help-form" data-page="help-form" class="btn btn-primary btn-large">Get in Touch</a>
+                <a href="#resources" data-page="resources" class="btn btn-primary">Browse Resources</a>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!-- =================================================================
+     TEMPLATE FOR ADDING A NEW ENTRY
+     Copy the block below, uncomment it, and paste it inside
+     <div class="practice-grid"> above. Newest entries go at the TOP.
+
+<article class="practice-card" data-tags="assessment, writing">
+    <div class="practice-video">
+        <div class="video-embed">
+            <iframe
+                src="https://echo360.org/media/MEDIA_ID/public?autoplay=false&automute=false"
+                title="Video Title"
+                frameborder="0"
+                allowfullscreen
+                allow="autoplay; fullscreen; picture-in-picture">
+            </iframe>
+        </div>
+    </div>
+    <div class="practice-details">
+        <h2>Video Title</h2>
+        <p class="practice-byline">
+            <strong>Faculty Name</strong><br>
+            Title, Department
+        </p>
+        <p class="practice-meta">
+            <span class="practice-tag">Assessment</span>
+            <span class="practice-tag">Writing</span>
+            <span class="practice-duration">6 min</span>
+        </p>
+        <p>Description of what the viewer will see.</p>
+        <p class="practice-takeaway">
+            <strong>What you can try:</strong> One transferable action.
+        </p>
+    </div>
+</article>
+
+     -----------------------------------------------------------------
+     THUMBNAIL FALLBACK
+     Use this instead of the <div class="video-embed"> block if the video
+     cannot be embedded publicly (e.g. Echo360 public links are disabled).
+     Put the thumbnail image in /images/ and keep it under ~300 KB.
+
+        <a href="ECHO360_WATCH_URL" class="video-thumb" target="_blank" rel="noopener">
+            <img src="images/thumb-faculty-name.jpg" alt="Video thumbnail: Video Title">
+            <span class="video-thumb-play" aria-hidden="true">&#9654;</span>
+        </a>
+
+     ================================================================= -->
