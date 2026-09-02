@@ -1364,23 +1364,26 @@ h3 {
     border-radius: 20px;
 }
 
+.practice-date,
 .practice-duration {
     font-size: 0.85rem;
     color: var(--wpi-gray);
-    margin-left: auto;
     white-space: nowrap;
 }
 
+/* Push date + duration to the right end of the meta row */
 .practice-date {
-    font-size: 0.85rem;
-    color: var(--wpi-gray);
-    white-space: nowrap;
+    margin-left: auto;
 }
 
-.practice-details > .practice-date {
-    display: block;
-    margin: -0.5rem 0 1rem 0;
-    font-style: italic;
+.practice-byline a {
+    color: var(--wpi-crimson);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.practice-byline a:hover {
+    text-decoration: underline;
 }
 
 .practice-takeaway {
