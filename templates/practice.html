@@ -21,22 +21,15 @@
 
         <div class="practice-grid">
 
-            <article class="practice-card" data-tags="workflow, getting-started">
+            <!-- ============================================================
+                 ENTRY 3 - Sara Saberi (newest)
+                 ============================================================ -->
+            <article class="practice-card" data-tags="business, teaching">
                 <div class="practice-video">
-                    <!--
-                        ECHO360 EMBED
-                        In EchoVideo: open the media > Share > Embed, and make sure the link
-                        type is set to PUBLIC (an authenticated link will show a login wall to
-                        anyone outside WPI). Paste the resulting src below.
-
-                        If WPI has public links disabled at the admin level, delete this iframe
-                        and use the THUMBNAIL FALLBACK block instead (see the commented example
-                        at the bottom of this file).
-                    -->
                     <div class="video-embed">
                         <iframe
-                            src="https://echo360.org/media/02ab6714-f8b6-4ff2-915f-37c47a27585d/public?autoplay=false&automute=false"
-                            title="How I Use AI in My Teaching Workflow"
+                            src="https://echo360.org/media/7f025893-1003-4c15-8109-6a259caa1b48/public?autoplay=false&automute=false"
+                            title="Designing a Business Course Around AI-Augmented Supply Chain Analysis"
                             frameborder="0"
                             allowfullscreen
                             allow="autoplay; fullscreen; picture-in-picture">
@@ -45,7 +38,98 @@
                 </div>
 
                 <div class="practice-details">
-                    <h2>How I Use AI in My Teaching Workflow</h2>
+                    <h2>Designing a Business Course Around AI-Augmented Supply Chain Analysis</h2>
+
+                    <p class="practice-byline">
+                        <strong>Sara Saberi, PhD</strong><br>
+                        Associate Professor, Business School<br>
+                        Program Director, MS in Supply Chain Management
+                    </p>
+
+                    <p class="practice-date">Recorded September 2026</p>
+
+                    <p class="practice-meta">
+                        <span class="practice-tag">Business</span>
+                        <span class="practice-tag">Teaching</span>
+                        <span class="practice-duration">33 min</span>
+                    </p>
+
+                    <p>
+                        Sara walks through the first pass of a new graduate module she is designing for WPI's forthcoming MS in Supply Chain Management. The idea: teach future supply chain, procurement, and operations managers to work <em>with</em> AI on real inventory data rather than either avoiding it or offloading judgment to it.<br>
+                        Students first tackle a public Kaggle inventory dataset using only their own domain knowledge (reorder points, order quantities, lead times), then repeat the analysis with Claude Code guided by a <code>claude.md</code> file that gives the model a defined "expert consultant" persona.<br>
+                        She is candid that this is her first time teaching the course and that the material will change with each iteration. Her recurring theme: use AI, but own every sentence, every number, and every recommendation that comes out of it.
+                    </p>
+
+                    <p class="practice-takeaway">
+                        <strong>What you can try:</strong> Open the same prompt in two different AIs (for example, Claude and Gemini) and let each critique the other's suggestions. Saberi finds this surfaces angles neither model produces alone &mdash; useful for research responses, course design, or any decision where you want a second opinion before committing.
+                    </p>
+                </div>
+            </article>
+
+            <!-- ============================================================
+                 ENTRY 2 - Pradeep Radhakrishnan
+                 ============================================================ -->
+            <article class="practice-card" data-tags="engineering, teaching, admin">
+                <div class="practice-video">
+                    <div class="video-embed">
+                        <iframe
+                            src="https://echo360.org/media/756eecd4-6102-4cf0-8a17-6c0dc64d5ca0/public?autoplay=false&automute=false"
+                            title="Building a Department MQP Dashboard with Plain-Language Prompts"
+                            frameborder="0"
+                            allowfullscreen
+                            allow="autoplay; fullscreen; picture-in-picture">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="practice-details">
+                    <h2>Building a Department MQP Dashboard with Plain-Language Prompts</h2>
+
+                    <p class="practice-byline">
+                        <strong>Pradeep Radhakrishnan</strong><br>
+                        Faculty, Mechanical &amp; Materials Engineering<br>
+                        Coordinator, ME MQP Lab and Teaching Lab
+                    </p>
+
+                    <p class="practice-date">Recorded September 2026</p>
+
+                    <p class="practice-meta">
+                        <span class="practice-tag">Engineering</span>
+                        <span class="practice-tag">Teaching</span>
+                        <span class="practice-tag">Admin</span>
+                        <span class="practice-duration">26 min</span>
+                    </p>
+
+                    <p>
+                        Pradeep demos a working dashboard he built for the Mechanical &amp; Materials Engineering department to replace a scatter of spreadsheets for MQP tracking, budget management, and lab-access assignments. The stack is PHP + MySQL on his own web host, but he wrote none of it from scratch &mdash; Gemini generated the code, and he integrated and tested.<br>
+                        His starting prompt was short and non-technical: a plain-language description of the problem, plus a sample CSV from Qualtrics. Copilot kept steering him back toward Power BI (a Microsoft product) and a slow toolchain; Gemini proposed a lightweight web app and walked him through it step by step.<br>
+                        Both this dashboard and a companion lab-scheduling tool took roughly five hours each to build, test, and deploy. When errors appeared, he screenshotted them and pasted them straight into the chat &mdash; the model diagnosed most from the image alone.
+                    </p>
+
+                    <p class="practice-takeaway">
+                        <strong>What you can try:</strong> Next time you hit a technical wall &mdash; a permission error, a broken query, a stuck install &mdash; screenshot it and paste it into your AI chat before you Google the error message. Radhakrishnan built two production tools this way without writing SQL from memory.
+                    </p>
+                </div>
+            </article>
+
+            <!-- ============================================================
+                 ENTRY 1 - Reza Ebadi (oldest)
+                 ============================================================ -->
+            <article class="practice-card" data-tags="engineering, teaching, admin">
+                <div class="practice-video">
+                    <div class="video-embed">
+                        <iframe
+                            src="https://echo360.org/media/02ab6714-f8b6-4ff2-915f-37c47a27585d/public?autoplay=false&automute=false"
+                            title="Using AI Projects to Audit a Syllabus and Analyze a CV"
+                            frameborder="0"
+                            allowfullscreen
+                            allow="autoplay; fullscreen; picture-in-picture">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="practice-details">
+                    <h2>Using AI Projects to Audit a Syllabus and Analyze a CV</h2>
 
                     <p class="practice-byline">
                         <strong>Reza Ebadi, PhD</strong><br>
@@ -53,23 +137,23 @@
                         AI Pedagogy Specialist, Morgan Teaching and Learning Center
                     </p>
 
+                    <p class="practice-date">Recorded August 2026</p>
+
                     <p class="practice-meta">
-                        <span class="practice-tag">Projects vs Chats</span>
-                        <span class="practice-tag">Course Design</span>
-    					<span class="practice-tag">Faculty Workflow</span>
+                        <span class="practice-tag">Engineering</span>
+                        <span class="practice-tag">Teaching</span>
+                        <span class="practice-tag">Admin</span>
                         <span class="practice-duration">15 min</span>
                     </p>
 
                     <p>
-                            A walkthrough of how I use AI Projects (in Claude and ChatGPT) instead of one-off chats to keep context, isolate memory, and organize work by theme. <br>
-                            I demo two projects of my own: one that maps every objective in my ME3310 Kinematics syllabus to specific homework, quiz, and exam questions; surfacing lecture topics I never actually assess;<br> 
-                            and one that ingests my CV to spot trends in my course evaluations, organize my MQP advising by theme, and draft bios at different lengths. <br>
-                            I also share the "Claude Sandbox" folder convention I use to give AI safe access to local files without exposing sensitive material.
-
+                        Reza walks through why he uses AI <em>Projects</em> (in Claude and ChatGPT) rather than one-off chats: persistent instructions, isolated memory, and threads organized by theme.<br>
+                        He demos two projects of his own. The first maps every objective in his ME3310 Kinematics syllabus to specific homework, quiz, and exam questions, surfacing lecture topics that are covered heavily but never actually assessed. The second ingests his CV to spot trends in course evaluations, organize MQP advising by theme, and draft speaker bios at three different lengths.<br>
+                        He also shares the "Claude Sandbox" folder convention he uses to give AI safe access to local files without exposing sensitive material.
                     </p>
 
                     <p class="practice-takeaway">
-                        <strong>What you can try:</strong> Create a new Project in Claude or ChatGPT, upload your CV, and ask it to summarize the trend in your course evaluations by course and flag anything worth a second look. 
+                        <strong>What you can try:</strong> Create a new Project in Claude or ChatGPT, upload your CV, and ask it to summarize the trend in your course evaluations by course and flag anything worth a second look.
                     </p>
                 </div>
             </article>
@@ -95,9 +179,19 @@
 <!-- =================================================================
      TEMPLATE FOR ADDING A NEW ENTRY
      Copy the block below, uncomment it, and paste it inside
-     <div class="practice-grid"> above. Newest entries go at the TOP.
+     <div class="practice-grid"> above. NEWEST entries go at the TOP.
 
-<article class="practice-card" data-tags="assessment, writing">
+     TAG CONVENTIONS (pick one from each axis, plus optional third):
+       Discipline:  Engineering | Business | Humanities & Arts |
+                    Sciences | Social Sciences | Interdisciplinary |
+                    Administrative
+       Function:    Teaching | Research | Advising | Admin |
+                    Professional Development
+       Optional:    Assessment | Writing | Coding | Course Design |
+                    Grant Prep | Data Analysis  (only if genuinely
+                    distinctive; two tags baseline, three max)
+
+<article class="practice-card" data-tags="engineering, teaching">
     <div class="practice-video">
         <div class="video-embed">
             <iframe
@@ -110,19 +204,25 @@
         </div>
     </div>
     <div class="practice-details">
-        <h2>Video Title</h2>
+        <h2>Specific, Task-Oriented Video Title</h2>
         <p class="practice-byline">
             <strong>Faculty Name</strong><br>
             Title, Department
         </p>
+        <p class="practice-date">Recorded MONTH YEAR</p>
         <p class="practice-meta">
-            <span class="practice-tag">Assessment</span>
-            <span class="practice-tag">Writing</span>
-            <span class="practice-duration">6 min</span>
+            <span class="practice-tag">Discipline</span>
+            <span class="practice-tag">Function</span>
+            <span class="practice-duration">X min</span>
         </p>
-        <p>Description of what the viewer will see.</p>
+        <p>
+            Third-person description of what the viewer will see. Name the
+            specific artifact or task and hint at the outcome. Two or three
+            sentences is plenty.
+        </p>
         <p class="practice-takeaway">
-            <strong>What you can try:</strong> One transferable action.
+            <strong>What you can try:</strong> One specific, transferable
+            action a colleague could apply in their own work this week.
         </p>
     </div>
 </article>
