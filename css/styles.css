@@ -1371,6 +1371,18 @@ h3 {
     white-space: nowrap;
 }
 
+.practice-date {
+    font-size: 0.85rem;
+    color: var(--wpi-gray);
+    white-space: nowrap;
+}
+
+.practice-details > .practice-date {
+    display: block;
+    margin: -0.5rem 0 1rem 0;
+    font-style: italic;
+}
+
 .practice-takeaway {
     background: var(--wpi-gray-light);
     border-left: 3px solid var(--wpi-crimson);
