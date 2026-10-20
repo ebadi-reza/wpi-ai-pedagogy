@@ -22,7 +22,54 @@
         <div class="practice-grid">
 
             <!-- ============================================================
-                 ENTRY 8 - Narahara Chari Dingari (newest)
+                 ENTRY 9 - Ahmet Can Sabuncu & Sahil Mirani (newest)
+                 ============================================================ -->
+            <article class="practice-card" data-tags="engineering, research">
+                <div class="practice-video">
+                    <div class="video-embed">
+                        <iframe
+                            src="https://echo360.org/media/53bb9d6e-e83e-4f51-86c6-4bf313762d5c/public?autoplay=false&automute=false"
+                            title="An AI Lab Buddy That Guides Troubleshooting Instead of Giving Answers"
+                            frameborder="0"
+                            allowfullscreen
+                            allow="autoplay; fullscreen; picture-in-picture">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="practice-details">
+                    <h2>An AI Lab Buddy That Guides Troubleshooting Instead of Giving Answers</h2>
+
+                    <p class="practice-byline">
+                        <strong>Ahmet Can Sabuncu</strong><br>
+                        Assistant Professor of Teaching, Mechanical &amp; Materials Engineering<br>
+                        <a href="https://www.wpi.edu/people/faculty/acsabuncu" target="_blank" rel="noopener">Faculty page &rarr;</a>
+                        <br><br>
+                        <strong>Sahil Mirani</strong><br>
+                        Robotics Engineering &amp; Mechanical and Materials Engineering, WPI Class of 2026
+                    </p>
+
+                    <p class="practice-meta">
+                        <span class="practice-tag">Engineering</span>
+                        <span class="practice-tag">Research</span>
+                        <!--<span class="practice-date">Recorded October 2026</span>-->
+                        <span class="practice-duration">28 min</span>
+                    </p>
+
+                    <p>
+                        Since 2024, Sahil Mirani has been building an AI "troubleshooting buddy" with Prof. Sabuncu for ME3901/ME3902 (Engineering Experimentation), where students build electromechanical hardware and debug it with code. The motivation: commercial chatbots tend to converge fast on one diagnosis and hand over the fix, which invites cognitive offloading and short-circuits exactly the troubleshooting skill the course is trying to build.<br>
+                        The tool is a multi-agent pipeline, built no-code in a drag-and-drop, LangChain-style platform (Flowise, now being replaced after it was sunset) using natural-language instructions rather than code. Students can type, talk, or upload files and photos of their circuit. For domain-knowledge questions ("how does this component work?") it answers directly; for troubleshooting questions, it uses Socratic-style questioning and quick verification steps &mdash; including simple ASCII circuit diagrams &mdash; to help students explore several hypotheses before narrowing in, rather than announcing the fix.<br>
+                        Nothing in the current flow is course-specific: adapting it to another class means adding one node with your own lecture slides, assignments, lab documents, or even just a short markdown file of course context &mdash; no programming required. Two earlier lab versions were piloted with students and revised from feedback; the current version hasn't been classroom-tested yet. Can is candid about the rough edges: Socratic-style prompting can misfire on a simple factual question ("what's atmospheric pressure at sea level?" deserves an answer, not "what do you think it is?"), and packing roughly 50,000 characters of custom instructions into one system prompt starts to produce contradictions. Estimated running cost: about 1&ndash;2 cents per message, or roughly $100 per term for a 30-student course.
+                    </p>
+
+                    <p class="practice-takeaway">
+                        <strong>What you can try:</strong> If you're building or adapting an AI tutor for troubleshooting-style work, explicitly instruct it to resist converging on one diagnosis &mdash; have it help students weigh a few hypotheses before narrowing down &mdash; and separate "just tell me a fact" questions from "guide me through a problem" questions. You don't need to build this from scratch: Sahil and Prof. Sabuncu's framework is intentionally course-agnostic, so pointing it at your own lecture notes or a short markdown file of course context is enough to try it in your own class.
+                    </p>
+                </div>
+            </article>
+
+            <!-- ============================================================
+                 ENTRY 8 - Narahara Chari Dingari
                  ============================================================ -->
             <article class="practice-card" data-tags="data-science, teaching">
                 <div class="practice-video">
