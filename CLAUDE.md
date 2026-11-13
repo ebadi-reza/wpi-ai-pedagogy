@@ -24,6 +24,7 @@ wpi-ai-pedagogy/
 │   ├── home.html
 │   ├── about.html
 │   ├── programs.html
+│   ├── practice.html       # "AI in Practice" faculty videos (Echo360 embeds, newest first)
 │   ├── resources.html
 │   ├── news.html           # ← MOST FREQUENTLY UPDATED
 │   └── help-form.html
