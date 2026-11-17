@@ -1338,6 +1338,17 @@ h3 {
     hyphens: auto;
 }
 
+/* Highlighted link inside a practice description paragraph */
+.practice-inline-link {
+    color: var(--wpi-crimson);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.practice-inline-link:hover {
+    color: var(--wpi-crimson-dark);
+}
+
 .practice-byline {
     color: var(--wpi-gray-dark);
     font-size: 0.95rem;
